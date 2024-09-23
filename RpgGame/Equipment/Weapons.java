@@ -1,4 +1,4 @@
-package RGBGame.Equipment;
+package RpgGame.Equipment;
 
 public class Weapons {
     public String name;

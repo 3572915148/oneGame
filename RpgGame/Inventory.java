@@ -1,8 +1,9 @@
-package RGBGame;
+package RpgGame;
 
 import java.util.HashMap;
-import RGBGame.Equipment.Weapons;
-import RGBGame.Equipment.equipmentAttributes;
+
+import RpgGame.Equipment.Weapons;
+import RpgGame.Equipment.equipmentAttributes;
 
 // import java.util.HashMap;
 
@@ -47,7 +48,6 @@ public class Inventory {
             System.out.println(this.inventoryBloc);
         }
     }
-
     // 每种装备应有不同的属性加成（如增加攻击力、防御力、恢复生命值等）。
 
 }

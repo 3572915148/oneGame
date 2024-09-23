@@ -1,4 +1,4 @@
-package RGBGame.Equipment;
+package RpgGame.Equipment;
 
 import java.util.HashMap;
 

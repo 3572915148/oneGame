@@ -1,4 +1,4 @@
-package RGBGame.Equipment;
+package RpgGame.Equipment;
 
 public class Attack extends Weapons {
     public int attackPower;
