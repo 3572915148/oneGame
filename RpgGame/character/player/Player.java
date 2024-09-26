@@ -1,23 +1,16 @@
-package RpgGame;
+package RpgGame.character.player;
 
-import RpgGame.Equipment.Weapons;
+import RpgGame.Equipment.Equipment;
+import RpgGame.Equipment.Inventory;
 import RpgGame.Equipment.equipmentAttributes;
+import RpgGame.character.Character;
 
-public class Player {
+public class Player extends Character {
     // 创建一个Player类，包含玩家的基本属性（如生命值、法力值、攻击力、防御力等）
-    public String name;
-    public int hp;
-    public int blue;
-    public int attack;
-    public int defense;
     public Inventory inventory;
 
     public Player(String name, int hp, int blue, int attack, int defense) {
-        this.name = name;
-        this.hp = hp;
-        this.blue = blue;
-        this.attack = attack;
-        this.defense = defense;
+        super(name, hp, blue, attack, defense);
         this.inventory = new Inventory();
     }
 
@@ -32,13 +25,13 @@ public class Player {
     }
 
     // 增加装备属性
-    public void addWepons(Weapons equipment) {
-        equipmentAttributes status = inventory.addWepons(equipment);
+    public void addEquipment(Equipment equipment) {
+        equipmentAttributes status = inventory.addEquipment(equipment);
         this.applyequipmentAttributes(status, false);
     }
 
     // 删除装备属性
-    public void removeWepons(String equipmentName) {
+    public void removeEquipment(String equipmentName) {
         equipmentAttributes status = inventory.removeWepons(equipmentName);
         this.applyequipmentAttributes(status, true);
     }
@@ -58,4 +51,24 @@ public class Player {
         this.hp += status.potionsPower;
     }
 
+    @Override
+    public void attack(Character hurtCharacter) {
+        // TODO 后续可能有攻击暴击逻辑，可以在这里实现
+        System.out.println("玩家" + this.name + "攻击了" + hurtCharacter.name);
+        hurtCharacter.getHurt(this.attack);
+    }
+
+    @Override
+    public void getHurt(Integer damage) {
+        // TODO 护甲减伤逻辑
+
+        System.out.println("玩家" + this.name + "受到了" + damage + "点伤害");
+
+        // 确保血量不会小于0
+        this.hp = Math.max(0, this.hp - damage);
+        if (this.hp == 0) {
+            System.out.println("玩家死亡，游戏结束!");
+            System.exit(0);
+        }
+    }
 }
