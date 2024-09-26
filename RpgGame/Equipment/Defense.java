@@ -8,7 +8,11 @@ public class Defense extends Weapons {
         this.defensePower = defensePower;
     }
 
-    public equipmentAttributes getDefense() {
+    public Integer getDefense() {
+        return defensePower;
+    }
+
+    public equipmentAttributes getStatus() {
         return new equipmentAttributes(0, 0, this.defensePower);
     }
 }

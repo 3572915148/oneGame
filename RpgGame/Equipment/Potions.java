@@ -8,7 +8,11 @@ public class Potions extends Weapons {
         this.potionsPower = potionsPower;
     }
 
-    public equipmentAttributes getPotions() {
+    public Integer getPotions() {
+        return potionsPower;
+    }
+
+    public equipmentAttributes getStatus() {
         return new equipmentAttributes(this.potionsPower, 0, 0);
     }
 }

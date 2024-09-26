@@ -1,7 +1,5 @@
 package RpgGame.Equipment;
 
-import java.util.HashMap;
-
 //装备属性
 public class equipmentAttributes {
     public int potionsPower;
@@ -14,13 +12,4 @@ public class equipmentAttributes {
         this.defensePower = defensePower;
     }
 
-    public HashMap<String, Integer> getStatus() {
-        return new HashMap<String, Integer>() {
-            {
-                put("potionsPower", potionsPower);
-                put("attackPower", attackPower);
-                put("defensePower", defensePower);
-            }
-        };
-    }
 }

@@ -13,21 +13,20 @@ public class Inventory {
     public HashMap<String, Weapons> inventoryBloc;
     public int maxSize;
 
-    public Inventory(HashMap<String, Weapons> inventoryBloc, int maxSize) {
-        this.inventoryBloc = inventoryBloc;
+    public Inventory() {
+        this.inventoryBloc = new HashMap<>();
         this.maxSize = 6;
     }
 
     // 实现添加
-    public Weapons addWepons(Weapons equipment) {
-        if (inventoryBloc.size() > maxSize) {
-            System.out.println("对不起，你的装备栏已满");
-        } else {
+    public equipmentAttributes addWepons(Weapons equipment) {
+        if (this.inventoryBloc.size() < maxSize) {
             this.inventoryBloc.put(equipment.getName(), equipment);
             System.out.println("装备" + equipment.getName() + "添加成功！");
-            // TODO: 相应的属性添加
+            return equipment.getStatus();
         }
-        return null;
+        System.out.println(equipment + "添加失败");
+        return new equipmentAttributes(0, 0, 0);
     }
 
     // 移除功能。
@@ -39,15 +38,8 @@ public class Inventory {
             System.out.println("装备" + equipmentName + "删除成功！");
             return status;
         }
-        return null;
+        System.out.println(equipmentName + "移除失败");
+        return new equipmentAttributes(0, 0, 0);
     }
-
-    // 查看装备
-    public void viewWeapons() {
-        for (int i = 1; i < inventoryBloc.size(); i++) {
-            System.out.println(this.inventoryBloc);
-        }
-    }
-    // 每种装备应有不同的属性加成（如增加攻击力、防御力、恢复生命值等）。
 
 }

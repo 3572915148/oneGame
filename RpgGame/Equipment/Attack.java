@@ -8,7 +8,11 @@ public class Attack extends Weapons {
         this.attackPower = attackPower;
     }
 
-    public equipmentAttributes getAttack() {
+    public Integer getAttack() {
+        return attackPower;
+    }
+
+    public equipmentAttributes getStatus() {
         return new equipmentAttributes(0, this.attackPower, 0);
     }
 }
