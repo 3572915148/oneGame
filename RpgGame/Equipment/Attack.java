@@ -1,6 +1,6 @@
 package RpgGame.Equipment;
 
-public class Attack extends Weapons {
+public class Attack extends Equipment {
     public int attackPower;
 
     public Attack(String name, int attackPower) {

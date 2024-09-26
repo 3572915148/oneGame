@@ -16,10 +16,10 @@ public class RpgGame {
         Player gamer = new Player("石柒", 100, 70, 30, 20);
         gamer.showPlayerStatus();
 
-        gamer.addWepons(greatSword);
-        gamer.addWepons(clothArmor);
-        gamer.removeWepons("短剑");
-        gamer.removeWepons("布甲");
+        gamer.addEquipment(greatSword);
+        gamer.addEquipment(clothArmor);
+        gamer.removeEquipment("短剑");
+        gamer.removeEquipment("布甲");
 
         gamer.showPlayerStatus();
 

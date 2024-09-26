@@ -1,6 +1,6 @@
 package RpgGame.Equipment;
 
-public class Potions extends Weapons {
+public class Potions extends Equipment {
     public int potionsPower;
 
     public Potions(String name, int potionsPower) {

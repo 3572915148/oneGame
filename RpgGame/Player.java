@@ -1,6 +1,6 @@
 package RpgGame;
 
-import RpgGame.Equipment.Weapons;
+import RpgGame.Equipment.Equipment;
 import RpgGame.Equipment.equipmentAttributes;
 
 public class Player {
@@ -32,14 +32,14 @@ public class Player {
     }
 
     // 增加装备属性
-    public void addWepons(Weapons equipment) {
-        equipmentAttributes status = inventory.addWepons(equipment);
+    public void addEquipment(Equipment equipment) {
+        equipmentAttributes status = inventory.addEquipment(equipment);
         this.applyequipmentAttributes(status, false);
     }
 
     // 删除装备属性
-    public void removeWepons(String equipmentName) {
-        equipmentAttributes status = inventory.removeWepons(equipmentName);
+    public void removeEquipment(String equipmentName) {
+        equipmentAttributes status = inventory.removeEquipment(equipmentName);
         this.applyequipmentAttributes(status, true);
     }
 

@@ -1,9 +1,9 @@
 package RpgGame.Equipment;
 
-public class Weapons {
+public class Equipment {
     public String name;
 
-    public Weapons(String name) {
+    public Equipment(String name) {
         this.name = name;
     }
 

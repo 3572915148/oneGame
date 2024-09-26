@@ -2,7 +2,7 @@ package RpgGame;
 
 import java.util.HashMap;
 
-import RpgGame.Equipment.Weapons;
+import RpgGame.Equipment.Equipment;
 import RpgGame.Equipment.equipmentAttributes;
 
 // import java.util.HashMap;
@@ -10,7 +10,7 @@ import RpgGame.Equipment.equipmentAttributes;
 public class Inventory {
     // 创建一个Inventory类，用于管理玩家的装备栏。
     // 装备栏可以存储不同类型的装备（如武器、防具、药水等）。
-    public HashMap<String, Weapons> inventoryBloc;
+    public HashMap<String, Equipment> inventoryBloc;
     public int maxSize;
 
     public Inventory() {
@@ -19,7 +19,7 @@ public class Inventory {
     }
 
     // 实现添加
-    public equipmentAttributes addWepons(Weapons equipment) {
+    public equipmentAttributes addEquipment(Equipment equipment) {
         if (this.inventoryBloc.size() < maxSize) {
             this.inventoryBloc.put(equipment.getName(), equipment);
             System.out.println("装备" + equipment.getName() + "添加成功！");
@@ -30,9 +30,9 @@ public class Inventory {
     }
 
     // 移除功能。
-    public equipmentAttributes removeWepons(String equipmentName) {
+    public equipmentAttributes removeEquipment(String equipmentName) {
         if (this.inventoryBloc.containsKey(equipmentName)) {
-            Weapons equipment = this.inventoryBloc.get(equipmentName);
+            Equipment equipment = this.inventoryBloc.get(equipmentName);
             equipmentAttributes status = equipment.getStatus();
             this.inventoryBloc.remove(equipmentName);
             System.out.println("装备" + equipmentName + "删除成功！");
