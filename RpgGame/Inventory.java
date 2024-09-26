@@ -3,7 +3,6 @@ package RpgGame;
 import java.util.HashMap;
 
 import RpgGame.Equipment.Equipment;
-import RpgGame.Equipment.Weapons;
 import RpgGame.Equipment.equipmentAttributes;
 
 // import java.util.HashMap;
