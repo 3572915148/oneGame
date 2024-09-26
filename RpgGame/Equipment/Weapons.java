@@ -1,14 +1,15 @@
 package RpgGame.Equipment;
 
-public class Weapons {
-    public String name;
+public class Weapons extends Equipment {
+    private Integer attackPower;
 
-    public Weapons(String name) {
-        this.name = name;
+    public Weapons(String name, Integer attackPower) {
+        super(name);
+        this.attackPower = attackPower;
     }
 
-    public String getName() {
-        return this.name;
+    public Integer getAttack() {
+        return this.attackPower;
     }
 
     public equipmentAttributes getStatus() {

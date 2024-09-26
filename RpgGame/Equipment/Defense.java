@@ -1,6 +1,6 @@
 package RpgGame.Equipment;
 
-public class Defense extends Weapons {
+public class Defense extends Equipment {
     public int defensePower;
 
     public Defense(String name, int defensePower) {

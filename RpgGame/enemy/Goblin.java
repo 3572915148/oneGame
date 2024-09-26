@@ -1,14 +1,7 @@
 package RpgGame.enemy;
 
 public class Goblin extends Enemy {
-    public int enemyHp;
-    public int enemyAttack;
-    public int enemyDefense;
-
-    public Goblin(String name, int enemyHp, int enemyAttack, int enemyDefense) {
-        super(name);
-        this.enemyHp = enemyHp;
-        this.enemyAttack = enemyAttack;
-        this.enemyDefense = enemyDefense;
+    public Goblin(int enemyHp, int enemyAttack, int enemyDefense, String enemyName) {
+        super(enemyHp, enemyAttack, enemyDefense, enemyName);
     }
 }

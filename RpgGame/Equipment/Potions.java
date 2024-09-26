@@ -1,14 +1,14 @@
 package RpgGame.Equipment;
 
-public class Potions extends Weapons {
-    public int potionsPower;
+public class Potions extends Equipment {
+    public Integer potionsPower;
 
-    public Potions(String name, int potionsPower) {
+    public Potions(String name, Integer potionsPower) {
         super(name);
         this.potionsPower = potionsPower;
     }
 
-    public Integer getPotions() {
+    public Integer getPotion() {
         return potionsPower;
     }
 
