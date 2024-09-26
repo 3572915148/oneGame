@@ -2,22 +2,15 @@ package RpgGame;
 
 import RpgGame.Equipment.Equipment;
 import RpgGame.Equipment.equipmentAttributes;
+import RpgGame.Characters_.*;
 
-public class Player {
+public class Player extends Characters {
     // 创建一个Player类，包含玩家的基本属性（如生命值、法力值、攻击力、防御力等）
-    public String name;
-    public int hp;
-    public int blue;
-    public int attack;
-    public int defense;
+
     public Inventory inventory;
 
     public Player(String name, int hp, int blue, int attack, int defense) {
-        this.name = name;
-        this.hp = hp;
-        this.blue = blue;
-        this.attack = attack;
-        this.defense = defense;
+        super(name, hp, blue, attack, defense);
         this.inventory = new Inventory();
     }
 
