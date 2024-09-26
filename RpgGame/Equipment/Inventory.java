@@ -1,9 +1,6 @@
-package RpgGame;
+package RpgGame.Equipment;
 
 import java.util.HashMap;
-
-import RpgGame.Equipment.Equipment;
-import RpgGame.Equipment.equipmentAttributes;
 
 // import java.util.HashMap;
 

@@ -1,7 +1,7 @@
 package RpgGame.character.player;
 
-import RpgGame.Inventory;
 import RpgGame.Equipment.Equipment;
+import RpgGame.Equipment.Inventory;
 import RpgGame.Equipment.equipmentAttributes;
 import RpgGame.character.Character;
 
