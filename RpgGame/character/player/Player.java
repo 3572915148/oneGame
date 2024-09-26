@@ -4,8 +4,9 @@ import RpgGame.Equipment.Equipment;
 import RpgGame.Equipment.Inventory;
 import RpgGame.Equipment.equipmentAttributes;
 import RpgGame.character.Character;
+import RpgGame.interfaces.Fight_I;
 
-public class Player extends Character {
+public class Player extends Character implements Fight_I<Character> {
     // 创建一个Player类，包含玩家的基本属性（如生命值、法力值、攻击力、防御力等）
     public Inventory inventory;
 
@@ -52,10 +53,15 @@ public class Player extends Character {
     }
 
     @Override
-    public void attack(Character hurtCharacter) {
+    public void attack(Fight_I<Character> hurtCharacter) {
         // TODO 后续可能有攻击暴击逻辑，可以在这里实现
-        System.out.println("玩家" + this.name + "攻击了" + hurtCharacter.name);
-        hurtCharacter.getHurt(this.attack);
+        if (hurtCharacter instanceof Character) {
+            Character character = (Character) hurtCharacter;
+            System.out.println("玩家" + this.name + "攻击了" + character.name);
+            hurtCharacter.getHurt(this.attack);
+        } else {
+            System.out.println("攻击对象不是一个有效的角色");
+        }
     }
 
     @Override
