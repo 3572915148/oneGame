@@ -1,4 +1,4 @@
-package RpgGame.Equipment;
+package RpgGame.equipment;
 
 import java.util.HashMap;
 

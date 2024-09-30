@@ -1,4 +1,4 @@
-package RpgGame.Equipment;
+package RpgGame.equipment;
 
 //装备属性
 public class equipmentAttributes {

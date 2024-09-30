@@ -1,4 +1,4 @@
-package RpgGame.Equipment;
+package RpgGame.equipment;
 
 public class Potions extends Equipment {
     public Integer potionsPower;

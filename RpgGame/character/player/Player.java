@@ -1,8 +1,8 @@
 package RpgGame.character.player;
 
-import RpgGame.Equipment.Equipment;
-import RpgGame.Equipment.Inventory;
-import RpgGame.Equipment.equipmentAttributes;
+import RpgGame.equipment.Equipment;
+import RpgGame.equipment.Inventory;
+import RpgGame.equipment.equipmentAttributes;
 import RpgGame.character.Character;
 
 public class Player extends Character {

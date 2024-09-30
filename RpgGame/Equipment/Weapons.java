@@ -1,4 +1,4 @@
-package RpgGame.Equipment;
+package RpgGame.equipment;
 
 public class Weapons extends Equipment {
     private Integer attackPower;

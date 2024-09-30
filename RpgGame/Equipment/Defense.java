@@ -1,4 +1,4 @@
-package RpgGame.Equipment;
+package RpgGame.equipment;
 
 public class Defense extends Equipment {
     public int defensePower;

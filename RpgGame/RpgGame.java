@@ -1,10 +1,10 @@
 package RpgGame;
 
-import RpgGame.Equipment.Weapons;
+import RpgGame.equipment.Weapons;
 import RpgGame.character.enemy.Enemy;
 import RpgGame.character.player.Player;
-import RpgGame.Equipment.Defense;
-import RpgGame.Equipment.Potions;
+import RpgGame.equipment.Defense;
+import RpgGame.equipment.Potions;
 
 public class RpgGame {
     static Weapons greatSword = new Weapons("大剑", 20);
