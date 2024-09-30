@@ -15,7 +15,4 @@ public abstract class Character {
         this.defense = defense;
     }
 
-    public abstract void attack(Character hurtCharacter);
-
-    public abstract void getHurt(Integer damage);
 }
